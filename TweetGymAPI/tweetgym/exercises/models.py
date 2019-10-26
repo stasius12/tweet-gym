@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils.html import format_html
+
 from multiselectfield import MultiSelectField
 
 
@@ -23,6 +25,7 @@ class Exercise(models.Model):
     )
 
     name = models.CharField(max_length=256)
+    owner = models.ForeignKey('userprofile.Profile', on_delete=models.SET_NULL, null=True, related_name='exercises')
     description = models.TextField()
     cardio = models.BooleanField(default=False)
     difficulty = models.IntegerField(choices=DIFFICULTY_CHOICES)
@@ -36,3 +39,7 @@ class Exercise(models.Model):
         if self.cardio:
             self.muscle_group = []
         super().save(*args, **kwargs)
+
+    def photo_url(self):
+        if self.photo:
+            return format_html(f"<a href='{self.photo.url}'></a>")
