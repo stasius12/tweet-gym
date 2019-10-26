@@ -1,9 +1,49 @@
-<h1>
-    Detale komponentu:
-</h1>
+
+<div class="wrap">
+
+<!--------------Hamburger menu--------------->
+<button class="hamburger">
+    <span class="hamburger_box">
+        <span class="hamburger_inner"></span>
+    </span>
+</button>
+<div class="nav">
+    <ul class="nav_list">
+        <li class="nav_item"><a href="">Menu Główne</a></li>
+        <li class="nav_item"><a href="/excoptions">Ćwiczenia</a></li>
+        <li class="nav_item"><a href="">Mój profil</a></li>
+        <li class="nav_item"><a href="#">Zaloguj się</a></li>
+    </ul>
+</div>
+    
+       
+    
+<h2>Just do it!</h2>
+   
+
+
+<div id="some">
+<strong class="difficulty">Trudność: </strong> 
+</div>
 
 <div *ngIf="exercise">
+
+
+    <img src={{exercise.photo}}>
     <!-- <img src="{{baseURL}}{{exercise.plakat}}" width = "200px" height = "400px">  -->
-    <h1> {{exercise.name}}</h1>
-    <p>{{exercise.description}}</p>
+    <div class="container">
+
+        <h3> <i>{{exercise.name}}</i></h3>
+
+        <strong>Na które partie ciała:</strong>
+    
+        <p>{{exercise.muscle_group[0]}}</p>
+        <strong class="kardio">Czy zrobisz kardio?</strong>
+        <strong>Opis ćwiczenia: </strong>
+        <p class="desc">{{exercise.description}}</p>
+
+
+
+    </div>
+</div>
 </div>
