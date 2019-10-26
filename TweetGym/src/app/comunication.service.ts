@@ -15,7 +15,7 @@ export class ComunicationService {
   ) { }
 
   getExercises(): Observable<any>{
-    const exercises = this.http.get('');
+    //const exercises = this.http.get('');
     return exercises
   }
 }
