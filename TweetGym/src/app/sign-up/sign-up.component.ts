@@ -30,8 +30,8 @@ export class SignUpComponent implements OnInit {
     {
     "username":  "Krystynka",
     "email":  "customer004@email.com",
-    "password1":  "0000252525",
-    "password2":  "0000252525",
+    "password1":  "piesek123",
+    "password2":  "piesek123",
     })
     .subscribe(
     data  => {
