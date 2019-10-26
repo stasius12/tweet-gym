@@ -10,12 +10,15 @@ import { TESTComponent } from "./test/test.component";
 import { LogInComponent } from "./log-in/log-in.component";
 
 @NgModule({
-  declarations: [AppComponent, TESTComponent],
+  declarations: [
+    AppComponent, 
+    TESTComponent,
+    LogInComponent],
   imports: [
     AlertModule.forRoot(),
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

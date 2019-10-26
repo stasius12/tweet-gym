@@ -6,7 +6,7 @@ import { TESTComponent } from "./test/test.component";
 
 const routes: Routes = [
   { path: "", component: LogInComponent },
-  { path: "test/", component: TESTComponent }
+  { path: "test", component: TESTComponent }
 ];
 
 @NgModule({
