@@ -1,4 +1,7 @@
+import { Exercise } from './exercise'
+
 export interface User{
     id: Number;
-    nickname: String;
+    user: String[];
+    exercises: Exercise[];
 }

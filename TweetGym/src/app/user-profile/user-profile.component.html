@@ -1,1 +1,180 @@
-<p>user-profile works!</p>
+<div *ngIf="user" class="wrapper">
+  <section class="personal">
+    <div class="background"></div>
+    <div class="backgroundShadow"></div>
+    <div class="img"></div>
+    <div class="username">
+      <p>{{user.user.username}}</p>
+    </div>
+  </section>
+
+  <section class="exercises">
+    <div *ngFor='let ex of user.exercises' class="exercise">
+      <a href="">
+        <p class="description">{{ex.name}}</p>
+      </a>
+      <div class="free"></div>
+      <div [ngSwitch]='ex.difficulty' class="star-container">
+        <div *ngSwitchCase='3'>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <div *ngSwitchCase='2'>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+        </div>
+        <div *ngSwitchCase='1'>
+          <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .wrapper {
+    height: 100vh;
+    text-align: center;
+  }
+
+  .background {
+    background-image: url('../assets/morning.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 50vh;
+  }
+
+  .backgroundShadow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(130, 130, 130, 0.7);
+  }
+
+  .img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 50vw;
+    width: 50vw;
+    margin: 7vh auto;
+    border-radius: 50%;
+    background-image: url('../assets/profile_pic.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    border: 2px solid white;
+    /* box-shadow: ; */
+  }
+
+  .username {
+    position: absolute;
+    bottom: 52vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .username p {
+    color: white;
+    font-size: 20px;
+    text-transform: lowercase;
+    text-transform: capitalize;
+  }
+
+  .exercises {
+    position: relative;
+    height: 50vh;
+    overflow: scroll;
+    z-index: 1;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .exercise {
+    height: 10vh;
+    background-color: #aaa;
+    border-bottom: 2px solid #666;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+  }
+
+  i {
+    display: inline-block;
+    font-size: 20px;
+    padding-left: 2px;
+  }
+
+  i:nth-of-type(3) {
+    padding-right: 20px;
+  }
+
+  i,
+  p.description {
+    line-height: 10vh;
+  }
+
+  p.description {
+    padding-left: 5px;
+  }
+
+  .free {
+    display: inline-block;
+  }
+
+  a {
+    color: black;
+  }
+
+  @media (min-width: 360px) {
+    .username p {
+      font-size: 30px;
+    }
+  }
+
+  @media (min-height: 812px) {
+    .username {
+      bottom: 60vh;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .personal {
+      width: 50%;
+      height: 100vh;
+    }
+
+    .exercises {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      height: auto;
+      width: 50vw;
+      transform: translateY(-50%);
+    }
+
+    .img {
+      position: absolute;
+      left: 25%;
+      top: 10vh;
+      height: 30vw;
+      width: 30vw;
+    }
+
+    .background {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .username {
+      position: absolute;
+      bottom: 15vh;
+      left: 25%;
+      transform: translateX(-50%);
+    }
+  }
+
+</style>

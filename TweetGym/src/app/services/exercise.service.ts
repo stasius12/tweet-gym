@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { User } from './models/user';
-import { Exercise } from './models/exercise';
+import { User } from '../models/user';
+import { Exercise } from '../models/exercise';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../environments/environment';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: "root"
 })
 
-export class ComunicationService {
+export class ExerciseService{
 
   private baseURL = environment.apiURL;
   
