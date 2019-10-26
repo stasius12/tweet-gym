@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl } from "@angular/forms";
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import { AuthService } from '../services/auth.service'
 
 @Component({
   selector: 'app-log-in',
@@ -12,7 +13,7 @@ export class LogInComponent implements OnInit {
 
   private baseURL = environment.apiURL;
   constructor(
-    private httpClient: HttpClient
+    private as: AuthService
   ) {}
 
   login = new FormGroup({
@@ -21,20 +22,9 @@ export class LogInComponent implements OnInit {
   });
 
   submit(){
-    this.httpClient.post(this.baseURL+"/rest-auth/login/",
-    {
-    "username":  this.login.value.username,
-    "password":  this.login.value.password,
-    })
-    .subscribe(
-    data  => {
-    console.log("POST Request is successful ", data);
-    },
-    error  => {
-    console.log("Error", error);  
-    }   
-    );
+    this.as.loginUser(this.login.value);
   }
+
   ngOnInit() {
   }
 
