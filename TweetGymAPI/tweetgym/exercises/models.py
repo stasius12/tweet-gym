@@ -29,9 +29,6 @@ class Exercise(models.Model):
     muscle_group = MultiSelectField(choices=MUSCLE_GROUP_CHOICES, blank=True, null=True)
     photo = models.ImageField(upload_to="photos", blank=True, null=True)
 
-
-    DUŻY PYTONG
-
     def __str__(self):
         return self.name
 
