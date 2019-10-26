@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
   providedIn: "root"
 })
 
-export class UserService {
+export class ExerciseService{
 
   private baseURL = environment.apiURL;
   
@@ -17,14 +17,15 @@ export class UserService {
     private http: HttpClient
   ) { }
 
-  getallUsers(): Observable<any>{
-    const users = this.http.get(this.baseURL+'users/');
-    return users
+  getExercises(): Observable<any>{
+    const exercises = this.http.get('http://192.168.0.66:8000/exercises/');
+    return exercises
   }
 
-  getUserDetail(id: number): Observable<any>
+  getExerciseDetail(id: number): Observable<any>
   {
-    const user = this.http.get(`${this.baseURL}/users/${id}/`);
-    return user
+    const exercises = this.http.get(`${this.baseURL}/exercises/${id}/`);
+    return exercises
   }
+
 }
