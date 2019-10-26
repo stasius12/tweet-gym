@@ -3,6 +3,7 @@ from rest_framework import serializers
 from rest_auth.registration.serializers import RegisterSerializer
 
 from .models import Profile
+from .validators import contains_only_alpha
 from exercises.serializers import ExerciseSerializer
 
 
@@ -22,8 +23,8 @@ class ProfileSerializer(serializers.ModelSerializer):
 
 
 class CustomRegisterSerializer(RegisterSerializer):
-    first_name = serializers.CharField()
-    last_name = serializers.CharField()
+    first_name = serializers.CharField(validators=[contains_only_alpha])
+    last_name = serializers.CharField(validators=[contains_only_alpha])
 
     def custom_signup(self, request, user):
         user.first_name = self.validated_data.get('first_name', '')
