@@ -134,3 +134,5 @@ REST_FRAMEWORK = {
 REST_AUTH_REGISTER_SERIALIZERS = {
     'REGISTER_SERIALIZER': 'userprofile.serializers.CustomRegisterSerializer',
 }
+
+ACCOUNT_EMAIL_REQUIRED = False
