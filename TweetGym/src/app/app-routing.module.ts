@@ -3,12 +3,15 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { LogInComponent } from "./log-in/log-in.component";
 import { TESTComponent } from "./test/test.component";
-import { ExerciseDetailComponent } from './exercise-detail/exercise-detail.component';
+import { SignUpComponent } from "./sign-up/sign-up.component";
+import { UserProfileComponent } from "./user-profile/user-profile.component";
 
 const routes: Routes = [
-  { path: "", component: LogInComponent },
+  { path: "", component: SignUpComponent },
   { path: "test", component: TESTComponent },
-  { path: "test/:id", component: ExerciseDetailComponent }
+  { path: "signup", component: SignUpComponent },
+  { path: "login", component: LogInComponent },
+  { path: "userprofile", component: UserProfileComponent }
 ];
 
 @NgModule({

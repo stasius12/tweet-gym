@@ -7,19 +7,24 @@ import { AppComponent } from "./app.component";
 import { TESTComponent } from "./test/test.component";
 
 import { LogInComponent } from "./log-in/log-in.component";
-import { ExerciseDetailComponent } from './exercise-detail/exercise-detail.component';
+
+import { SignUpComponent } from "./sign-up/sign-up.component";
+import { UserProfileComponent } from "./user-profile/user-profile.component";
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
     TESTComponent,
     LogInComponent,
-    ExerciseDetailComponent],
+
+    SignUpComponent,
+    UserProfileComponent
+  ],
   imports: [
     AlertModule.forRoot(),
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

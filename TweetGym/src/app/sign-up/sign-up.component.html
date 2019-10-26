@@ -1,0 +1,66 @@
+<div class="wrapper">
+  <div class="backgroundColor">
+    <a href=""></a><i class="fas fa-arrow-left"></i>
+
+    <form action="">
+      <div class="form-group">
+        <input type="firstName" placeholder="First Name" class="form-control" id="firstName">
+      </div>
+      <div class="form-group">
+        <input type="lastName" placeholder="Last Name" class="form-control" id="lastName">
+      </div>
+      <div class="form-group">
+        <input type="username" placeholder="Username" class="form-control" id="username">
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Email" class="form-control" id="email">
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Password" class="form-control" id="password">
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Repeat Password" class="form-control" id="repeat-password">
+      </div>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+      <div class="form-group form-check">
+      </div>
+      <p>Already have account?<a routerLink="../login"> Log in!</a></p>
+
+    </form>
+  </div>
+</div>
+<style>
+  .wrapper {
+    height: 100vh;
+    background-image: url('../assets/dumbbells1280x853.jpg');
+    background-size: cover;
+    /* background-position: bottom; */
+  }
+
+  .backgroundColor {
+    height: 100vh;
+    background-color: rgba(200, 200, 200, 0.7);
+
+  }
+
+  form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  i {
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  @media (max-width:533px) and (orientation: landscape) {
+    * {
+      font-size: 14px;
+    }
+
+  }
+
+</style>
