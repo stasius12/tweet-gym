@@ -6,12 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TESTComponent } from './test/test.component';
+import { ExerciseDetailsComponent } from './exercise-details/exercise-details.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TESTComponent
+    TESTComponent,
+    ExerciseDetailsComponent
   ],
   imports: [
     AlertModule.forRoot(),
