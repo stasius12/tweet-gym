@@ -10,13 +10,14 @@ import { LogInComponent } from "./log-in/log-in.component";
 
 import { SignUpComponent } from "./sign-up/sign-up.component";
 import { UserProfileComponent } from "./user-profile/user-profile.component";
+import { ExerciseDetailComponent } from './exercise-detail/exercise-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TESTComponent,
     LogInComponent,
-
+    ExerciseDetailComponent,
     SignUpComponent,
     UserProfileComponent
   ],
