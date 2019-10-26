@@ -1,4 +1,5 @@
 from django.db import models
+
 from multiselectfield import MultiSelectField
 
 
@@ -23,6 +24,7 @@ class Exercise(models.Model):
     )
 
     name = models.CharField(max_length=256)
+    owner = models.ForeignKey('userprofile.Profile', on_delete=models.SET_NULL, null=True, related_name='exercises')
     description = models.TextField()
     cardio = models.BooleanField(default=False)
     difficulty = models.IntegerField(choices=DIFFICULTY_CHOICES)
