@@ -1,25 +1,25 @@
 <div class="wrapper">
   <div class="backgroundColor">
-    <a href=""></a><i class="fas fa-arrow-left"></i>
+    <a href=""></a><i class="fas fa-arrow-left" routerLink="/test"></i>
 
-    <form action="">
+    <form [formGroup]="register" (ngSubmit)="submit()">
       <div class="form-group">
-        <input type="firstName" placeholder="First Name" class="form-control" id="firstName">
+        <input type="firstName" placeholder="First Name" class="form-control" id="firstName" formControlName="firstName">
       </div>
       <div class="form-group">
-        <input type="lastName" placeholder="Last Name" class="form-control" id="lastName">
+        <input type="lastName" placeholder="Last Name" class="form-control" id="lastName" formControlName="lastName">
       </div>
       <div class="form-group">
-        <input type="username" placeholder="Username" class="form-control" id="username">
+        <input type="username" placeholder="Username" class="form-control" id="username" formControlName="username">
       </div>
       <div class="form-group">
-        <input type="email" placeholder="Email" class="form-control" id="email">
+        <input type="email" placeholder="Email" class="form-control" id="email" formControlName="email"> 
       </div>
       <div class="form-group">
-        <input type="password" placeholder="Password" class="form-control" id="password">
+        <input type="password" placeholder="Password" class="form-control" id="password" formControlName="password1">
       </div>
       <div class="form-group">
-        <input type="password" placeholder="Repeat Password" class="form-control" id="repeat-password">
+        <input type="password" placeholder="Repeat Password" class="form-control" id="repeat-password" formControlName="password2">
       </div>
       <button type="submit" class="btn btn-primary">Sign Up</button>
       <div class="form-group form-check">
