@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.html import format_html
 
 from multiselectfield import MultiSelectField
 
@@ -38,3 +39,7 @@ class Exercise(models.Model):
         if self.cardio:
             self.muscle_group = []
         super().save(*args, **kwargs)
+
+    def photo_url(self):
+        if self.photo:
+            return format_html(f"<a href='{self.photo.url}'></a>")
