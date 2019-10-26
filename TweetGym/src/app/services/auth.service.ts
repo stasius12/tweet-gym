@@ -24,6 +24,8 @@ export class AuthService {
     .subscribe(
     data  => {
     console.log("POST Request is successful ", data["key"]);
+    localStorage.setItem("Token", data["key"])
+    console.log("set")
     },
     error  => {
     console.log("Error", error);  
@@ -50,5 +52,9 @@ export class AuthService {
     console.log("Error", error);  
     }   
     );
+  }
+
+  getToken(){
+    return localStorage.getItem('Token')
   }
 }
