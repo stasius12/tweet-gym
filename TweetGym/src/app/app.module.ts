@@ -11,6 +11,8 @@ import { LogInComponent } from "./log-in/log-in.component";
 import { SignUpComponent } from "./sign-up/sign-up.component";
 import { UserProfileComponent } from "./user-profile/user-profile.component";
 
+import { ExcOptionsComponent } from './Components/exc-options/exc-options.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { UserProfileComponent } from "./user-profile/user-profile.component";
     LogInComponent,
 
     SignUpComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    ExcOptionsComponent
   ],
   imports: [
     AlertModule.forRoot(),

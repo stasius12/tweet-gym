@@ -1,0 +1,64 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+ul {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
+
+ul li {
+  height: 14.29vh;
+  padding-top: 5vh;
+  padding-bottom: auto;
+  font-size: 2.5rem;
+}
+
+.list-group-item {
+  text-align: center;
+}
+
+.custom-control-label {
+  font-size: 3rem;
+}
+
+.custom-control-label::before {
+  top: 0.7rem !important;
+  left: -2rem !important;
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+}
+
+.custom-control-label::after {
+  top: 0.7rem !important;
+  left: -2rem !important;
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+}
+
+.custom-control-label span {
+  margin-left: 1.5rem;
+  display: none;
+}
+
+.custom-control-label span:hover {
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  /* Double-sized Checkboxes */
+  /* IE */
+  /* FF */
+  -webkit-transform: scale(2);
+  /* Safari and Chrome */
+  /* Opera */
+  transform: scale(2);
+  padding: 10px;
+}
+
+#defaultChecked3 {
+  margin-right: 20px;
+}
+
+label {
+  height: 3rem;
+}
+/*# sourceMappingURL=exc-options.component.css.map */
