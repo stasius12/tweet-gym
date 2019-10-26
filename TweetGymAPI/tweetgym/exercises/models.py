@@ -42,4 +42,4 @@ class Exercise(models.Model):
 
     def photo_url(self):
         if self.photo:
-            return format_html(f"<a href='{self.photo.url}'></a>")
+            return format_html(f"<img style='max-width: 200px' src='{self.photo.url}'></a>")
