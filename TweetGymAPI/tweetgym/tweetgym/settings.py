@@ -25,7 +25,7 @@ SECRET_KEY = 'vw4d*c@t^p1)n9m=2kn9^qkhx*tps8^l&la@@-+i*+g14%*t8w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.0.66', 'localhost']
 
 
 # Application definition
@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+
+    'exercises',
+    'userprofile',
 ]
 
 MIDDLEWARE = [
@@ -52,9 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:4200'
-]
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'tweetgym.urls'
 
@@ -125,3 +126,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = 'media/'

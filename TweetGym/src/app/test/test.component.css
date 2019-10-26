@@ -1,0 +1,8 @@
+.exercise {
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid #d2a56d;
+    cursor: pointer;
+    display: inline-block;
+    flex-wrap: nowrap;
+}

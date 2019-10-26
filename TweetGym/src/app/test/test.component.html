@@ -1,0 +1,11 @@
+<h3 *ngIf="exercises">
+    KUŃ
+</h3>
+<h3>
+    {{wiadomosc}}
+</h3>
+<div class="exercise" *ngFor = "let exercise of exercises;">
+    <img src="{{exercise.photo}}" width = "100px" height = "200px"> 
+</div>
+
+
