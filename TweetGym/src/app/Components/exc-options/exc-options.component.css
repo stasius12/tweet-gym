@@ -1,4 +1,12 @@
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+*, html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100vh;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 ul {
   height: 100vh;
   width: 100vw;
