@@ -43,6 +43,30 @@
     background-color: #aaa;
     border-bottom: 2px solid #666;
     display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+  }
+
+  i {
+    display: inline-block;
+    font-size: 20px;
+    padding-left: 2px;
+  }
+
+  i:nth-of-type(3) {
+    padding-right: 20px;
+  }
+
+  i,
+  p.description {
+    line-height: 10vh;
+  }
+
+  p.description {
+    padding-left: 5px;
+  }
+
+  .free {
+    display: inline-block;
   }
 
 </style>
@@ -55,7 +79,9 @@
   </div>
   <section class="exercises">
     <div class="exercise">
-
+      <p class="description">Wyciskanie</p>
+      <div class="free"></div>
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
     </div>
   </section>
 </div>
