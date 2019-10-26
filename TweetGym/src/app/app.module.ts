@@ -7,12 +7,14 @@ import { AppComponent } from "./app.component";
 import { TESTComponent } from "./test/test.component";
 
 import { LogInComponent } from "./log-in/log-in.component";
+import { ExerciseDetailComponent } from './exercise-detail/exercise-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     TESTComponent,
-    LogInComponent],
+    LogInComponent,
+    ExerciseDetailComponent],
   imports: [
     AlertModule.forRoot(),
     BrowserModule,
