@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Exercise } from '../models/exercise';
-import { ComunicationService } from '../comunication.service';
+import { UserService } from '../services/user.service';
 import { Location } from '@angular/common';
 import { environment } from '../../environments/environment';
 import { User } from '../models/user';
@@ -21,13 +21,13 @@ export class UserProfileComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute, 
-    private es:ComunicationService,
+    private us:UserService,
     private location: Location
   ) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.es.getExerciseDetail(Number(id)).subscribe(
+    this.us.getUserDetail(Number(id)).subscribe(
       (dane) =>{
         this.user = dane;
       },

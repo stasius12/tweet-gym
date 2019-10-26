@@ -22,7 +22,7 @@ export class UserService {
     return users
   }
 
-  getExerciseDetail(id: number): Observable<any>
+  getUserDetail(id: number): Observable<any>
   {
     const user = this.http.get(`${this.baseURL}/users/${id}/`);
     return user
