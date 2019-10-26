@@ -4,6 +4,7 @@ import { Exercise } from '../models/exercise';
 import { ComunicationService } from '../comunication.service';
 import { Location } from '@angular/common';
 import { environment } from '../../environments/environment';
+import {starMe, Cardio, HamburgerMe} from './exercise-detail';
 
 @Component({
   selector: 'app-exercise-detail',
@@ -26,11 +27,23 @@ export class ExerciseDetailComponent implements OnInit {
     this.es.getExerciseDetail(Number(id)).subscribe(
       (dane) =>{
         this.exercise = dane;
+        console.log(dane);
+        setTimeout(() => {
+          console.log('xD');
+          starMe(dane.difficulty);
+          Cardio(dane.cardio);
+          HamburgerMe();
+  
+        }, 100);
+
       },
       (error) =>{
         console.log(error);
+
       }
       );
+
+     
 
   }
 
