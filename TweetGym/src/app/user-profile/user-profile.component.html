@@ -10,19 +10,19 @@
 
   <section class="exercises">
     <div *ngFor='let ex of user.exercises' class="exercise">
-      <a href="">
+      <a routerLink="/exercise/" +ex.id>
         <p class="description">{{ex.name}}</p>
       </a>
       <div class="free"></div>
       <div [ngSwitch]='ex.difficulty' class="star-container">
         <div *ngSwitchCase='3'>
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-hand-rock"></i><i class="fas fa-hand-rock"></i><i class="fas fa-hand-rock"></i>
         </div>
         <div *ngSwitchCase='2'>
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          <i class="fas fa-hand-rock"></i><i class="fas fa-hand-rock"></i><i class="far fa-hand-rock"></i>
         </div>
         <div *ngSwitchCase='1'>
-          <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+          <i class="fas fa-hand-rock"></i><i class="far fa-hand-rock"></i><i class="far fa-hand-rock"></i>
         </div>
       </div>
     </div>
