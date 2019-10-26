@@ -28,10 +28,12 @@ export class SignUpComponent implements OnInit {
   submit(){
     this.httpClient.post(this.baseURL+"/rest-auth/registration/",
     {
-    "username":  "Krystynka",
-    "email":  "customer004@email.com",
-    "password1":  "piesek123",
-    "password2":  "piesek123",
+    "username":  this.register.value.username,
+    "email":  this.register.value.email,
+    "password1":  this.register.value.password,
+    "password2":  this.register.value.password2,
+    "first_name":  this.register.value.firstName,
+    "last_name":  this.register.value.lastName,
     })
     .subscribe(
     data  => {
