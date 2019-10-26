@@ -21,6 +21,7 @@ export class ComunicationService {
     const exercises = this.http.get('http://192.168.0.66:8000/exercises/');
     return exercises
   }
+
   getExerciseDetail(id: number): Observable<any>
   {
     const exercises = this.http.get(`${this.baseURL}/exercises/${id}/`);
