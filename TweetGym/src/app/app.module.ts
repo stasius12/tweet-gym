@@ -1,20 +1,16 @@
-import{AlertModule} from 'ngx-bootstrap';
+import { AlertModule } from "ngx-bootstrap";
 
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { TESTComponent } from './test/test.component';
-import { ExerciseDetailsComponent } from './exercise-details/exercise-details.component';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { TESTComponent } from "./test/test.component";
 
+import { LogInComponent } from "./log-in/log-in.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TESTComponent,
-    ExerciseDetailsComponent
-  ],
+  declarations: [AppComponent, TESTComponent],
   imports: [
     AlertModule.forRoot(),
     BrowserModule,
@@ -24,4 +20,4 @@ import { ExerciseDetailsComponent } from './exercise-details/exercise-details.co
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
