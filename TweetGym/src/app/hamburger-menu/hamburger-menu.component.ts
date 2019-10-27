@@ -18,12 +18,15 @@ export class HamburgerMenuComponent{
 
   ngOnInit() {
     HamburgerMe();
-    this.logged = this.as.isLogged();
     this.Nick = this.as.getCurrentUser();
     }
 
   logout(){
     this.as.logout();
+  }
+
+  pies(){
+    this.logged = this.as.isLogged();
   }
 
 }
