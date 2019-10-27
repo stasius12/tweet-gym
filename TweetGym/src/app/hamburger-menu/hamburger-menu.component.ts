@@ -18,6 +18,7 @@ export class HamburgerMenuComponent{
 
   ngOnInit() {
     HamburgerMe();
+    this.logged = this.as.isLogged();
     this.Nick = this.as.getCurrentUser();
     }
 
