@@ -1,11 +1,11 @@
 <div class="wrapper">
   <div class="backgroundColor">
-    <a href=""></a><i class="fas fa-arrow-left" routerLink="/test"></i>
     <app-hamburger-menu></app-hamburger-menu>
 
     <form [formGroup]="register" (ngSubmit)="submit()">
       <div class="form-group">
-        <input type="firstName" placeholder="First Name" class="form-control" id="firstName" formControlName="firstName">
+        <input type="firstName" placeholder="First Name" class="form-control" id="firstName"
+          formControlName="firstName">
       </div>
       <div class="form-group">
         <input type="lastName" placeholder="Last Name" class="form-control" id="lastName" formControlName="lastName">
@@ -14,18 +14,19 @@
         <input type="username" placeholder="Username" class="form-control" id="username" formControlName="username">
       </div>
       <div class="form-group">
-        <input type="email" placeholder="Email" class="form-control" id="email" formControlName="email"> 
+        <input type="email" placeholder="Email" class="form-control" id="email" formControlName="email">
       </div>
       <div class="form-group">
         <input type="password" placeholder="Password" class="form-control" id="password" formControlName="password1">
       </div>
       <div class="form-group">
-        <input type="password" placeholder="Repeat Password" class="form-control" id="repeat-password" formControlName="password2">
+        <input type="password" placeholder="Repeat Password" class="form-control" id="repeat-password"
+          formControlName="password2">
       </div>
       <button type="submit" class="btn btn-primary">Sign Up</button>
       <div class="form-group form-check">
       </div>
-      <p>Already have account?<a routerLink="/login"> Log in!</a></p>
+      <p><b>Already have account?</b><a routerLink="/login"> Log in!</a></p>
 
     </form>
   </div>
@@ -40,7 +41,8 @@
 
   .backgroundColor {
     height: 100vh;
-    background-color: rgba(200, 200, 200, 0.7);
+    /* background-color: rgba(200, 200, 200, 0.7); */
+    background-color: #474b4f84;
 
   }
 
@@ -55,6 +57,15 @@
   i {
     padding: 20px;
     font-size: 30px;
+  }
+
+  .btn.btn-primary {
+    background-color: #86c232;
+    border-color: #86c232;
+  }
+
+  a {
+    color: #86c232;
   }
 
   @media (max-width:533px) and (orientation: landscape) {
