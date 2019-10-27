@@ -54,7 +54,26 @@ export class AuthService {
     );
   }
 
+  isLogged(){
+    if (localStorage.getItem('Token'))
+    {
+      return true
+    }
+    else{
+      return false
+    }
+  }
+
+  logout(){
+    if(this.getToken()){
+    localStorage.removeItem('Token')
+    }
+    console.log("Logout");
+  }
+
   getToken(){
     return localStorage.getItem('Token')
   }
+
+
 }
