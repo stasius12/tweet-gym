@@ -10,6 +10,7 @@ import { AuthService } from '../services/auth.service'
 export class HamburgerMenuComponent{
 
   logged: Boolean;
+  Nick: Object;
 
   constructor(
     private as: AuthService
@@ -18,7 +19,8 @@ export class HamburgerMenuComponent{
   ngOnInit() {
     HamburgerMe();
     this.logged = this.as.isLogged();
-  }
+    this.Nick = this.as.getCurrentUser();
+    }
 
   logout(){
     this.as.logout();

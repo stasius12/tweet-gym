@@ -8,8 +8,11 @@
     <ul class="nav_list">
         <li class="nav_item" ><a (click)="pies()">Menu Główne</a></li>
         <li class="nav_item"><a routerLink="">Ćwiczenia</a></li>
-        <li class="nav_item"><a routerLink="/userprofile/2">Mój profil</a></li>
+        <li class="nav_item"><a *ngIf="logged" routerLink="/userprofile/2">Mój profil</a></li>
         <li class="nav_item"><a *ngIf="logged==false"routerLink="/login">Zaloguj się</a></li>
         <li class="nav_item"><a *ngIf="logged" routerLink="/login" (click)="logout()">Wyloguj się</a></li>
+        <br>
+        <li class="nav_item"><a *ngIf="logged">Jesteś zalogowany jako:</a></li>
+        <li class="nav_item"><a *ngIf="logged">{{Nick}}</a></li>
     </ul>
 </div>
