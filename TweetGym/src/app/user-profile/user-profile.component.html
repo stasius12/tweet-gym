@@ -4,17 +4,18 @@
     <div class="backgroundShadow"></div>
     <div class="img"></div>
     <div class="username">
-      <p>{{user.user.username}}</p>
+      <p class="name">{{user.user.username}}</p>
+      <p class="quote">"Bo siadać na butelce trzeba umieć"</p>
     </div>
   </section>
 
   <section class="exercises">
     <div *ngFor='let ex of user.exercises' class="exercise">
-      <a routerLink="/exercise/" +ex.id>
+      <a routerLink="/exercise/{{ex.id}}">
         <p class="description">{{ex.name}}</p>
       </a>
       <div class="free"></div>
-      <div [ngSwitch]='ex.difficulty' class="star-container">
+      <div [ngSwitch]='ex.difficulty' class="hand-container">
         <div *ngSwitchCase='3'>
           <i class="fas fa-hand-rock"></i><i class="fas fa-hand-rock"></i><i class="fas fa-hand-rock"></i>
         </div>
@@ -30,17 +31,32 @@
 </div>
 
 <style>
+  .username p.quote {
+    /* opacity: 0; */
+    font-size: 15px;
+    background-color: #474b4f00;
+    border-radius: 5px;
+    color: #ddd;
+  }
+
+  .hand-container {
+    color: #6b6e70;
+  }
+
   .wrapper {
     height: 100vh;
     text-align: center;
   }
 
   .background {
-    background-image: url('../assets/morning.jpg');
+    background-color: #6b6e70;
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     height: 50vh;
+
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
   }
 
   .backgroundShadow {
@@ -66,7 +82,7 @@
     background-position: top;
     background-size: cover;
     border: 2px solid white;
-    /* box-shadow: ; */
+    box-shadow: 0 0 2px 2px #6b6e70;
   }
 
   .username {
@@ -76,11 +92,13 @@
     transform: translateX(-50%);
   }
 
-  .username p {
-    color: white;
+  .username p.name {
+    color: #9fe53d;
     font-size: 20px;
     text-transform: lowercase;
     text-transform: capitalize;
+    background-color: rgba(100, 100, 100, 0.8);
+    border-radius: 5px;
   }
 
   .exercises {
@@ -96,7 +114,7 @@
 
   .exercise {
     height: 10vh;
-    background-color: #aaa;
+    background-color: #222629;
     border-bottom: 2px solid #666;
     display: grid;
     grid-template-columns: auto 1fr auto auto auto;
@@ -119,6 +137,7 @@
 
   p.description {
     padding-left: 5px;
+    color: #ddd;
   }
 
   .free {
@@ -126,54 +145,87 @@
   }
 
   a {
-    color: black;
+    color: #6b6e70;
   }
 
   @media (min-width: 360px) {
+    .username {
+      bottom: 56vh;
+    }
+
     .username p {
       font-size: 30px;
     }
   }
 
-  @media (min-height: 812px) {
-    .username {
-      bottom: 60vh;
+  @media(min-width:411px) {
+    .exercises {
+      top: -5vh;
+      height: 55vh;
     }
   }
 
-  @media (orientation: landscape) {
-    .personal {
-      width: 50%;
-      height: 100vh;
+  @media(min-width:768px) {
+    .username p.name {
+      font-size: 30px;
     }
 
-    .exercises {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      height: auto;
-      width: 50vw;
-      transform: translateY(-50%);
+    @media (min-height: 812px) {
+      .username {
+        bottom: 60vh;
+      }
     }
 
-    .img {
-      position: absolute;
-      left: 25%;
-      top: 10vh;
-      height: 30vw;
-      width: 30vw;
+    @media (min-width: 1024px) {
+      .username p {
+        font-size: 60px;
+      }
+
+      .username p.quote {
+        /* opacity: 0; */
+        font-size: 30px;
+      }
     }
 
-    .background {
-      width: 100vw;
-      height: 100vh;
+    @media (orientation: landscape) {
+      .personal {
+        width: 50%;
+        height: 100vh;
+      }
+
+      .exercises {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        height: auto;
+        width: 50vw;
+        transform: translateY(-50%);
+      }
+
+      .img {
+        position: absolute;
+        left: 25%;
+        top: 10vh;
+        height: 30vw;
+        width: 30vw;
+      }
+
+      .background {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .username {
+        position: absolute;
+        bottom: 15vh;
+        left: 25%;
+        transform: translateX(-50%);
+      }
     }
 
-    .username {
-      position: absolute;
-      bottom: 15vh;
-      left: 25%;
-      transform: translateX(-50%);
+    .username p.quote {
+      background-color: rgba(100, 100, 100, 0.8);
+      font-size: 20px;
     }
   }
 
