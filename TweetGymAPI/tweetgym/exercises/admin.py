@@ -5,7 +5,7 @@ from .models import Exercise, ExerciseRating
 
 @admin.register(Exercise)
 class ExerciseAdmin(admin.ModelAdmin):
-    list_display = ['photo_url', 'name', 'cardio', 'avg_rating']
+    list_display = ['photo_url', 'name', 'cardio', 'muscle_group', 'avg_rating']
 
     def avg_rating(self, obj):
         return obj.avg_rating
