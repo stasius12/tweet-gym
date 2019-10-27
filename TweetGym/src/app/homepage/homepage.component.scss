@@ -1,0 +1,89 @@
+
+html{
+    background-image:linear-gradient(to right bottom, rgb(255,255,255), rgb(23, 90, 2));
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    //width: 100vw;
+    //height: 100vh;
+}
+
+.wrap{
+    //background-image:linear-gradient(to right bottom, #222629, #6b6e70);
+    background-image: url('../../assets/dumbbells1280x853.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+.smth{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4rem;
+    padding-top: 30vh;
+    color: #86c232;    
+    text-shadow: 5px 5px rgb(27, 23, 23);
+}
+.fuck-bootstrap{
+
+background-image:linear-gradient(to right bottom, rgb(31,145,211), rgb(255,255,255)); 
+    text-align: center;
+    margin-left: 40vw;
+    border-radius: 2rem;
+    border: none;
+&:hover{
+    cursor:pointer;
+}
+
+@media only screen and(min-width: 10rem){
+    .fuck-bootstrap{
+        margin-left: 40vw;
+    }
+}
+
+}
+@media only screen and(min-width: 20rem){
+    .smth{
+        font-size: 6rem;
+        line-height: 6rem;
+    }
+    .fuck-bootstrap{
+        margin-left: 47vw;
+        font-size: 2rem;
+    }
+}
+@media only screen and(min-width: 60rem ){
+    .smth{
+        font-size: 10rem;
+    }
+    .fuck-bootstrap{
+        margin-top: 3rem;
+        font-size: 3rem;
+        margin-left: 43vw;
+        transition: all .4s;
+        &:hover{
+            cursor: pointer;
+            transform: translateX(1rem);
+        }
+        &:focus-within{
+            text-decoration: none;
+        }
+
+    }
+
+}
+
+@media only screen and(min-width: 90rem){
+
+    .smth{
+        font-size: 14rem;
+    }
+    .fuck-bootstrap{
+        margin-top: 6rem;
+        margin-left: 45vw;
+        font-size: 3.5rem;
+    }
+
+}
+
