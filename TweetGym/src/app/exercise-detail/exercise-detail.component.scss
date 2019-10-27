@@ -19,7 +19,7 @@ $light: #FFFFFF;
 
 }
 .wrap{
-    background-image:linear-gradient(135deg, gray, cyan);
+    background-image: linear-gradient(to bottom left,#c6fa7d,rgb(77, 109, 37));
     height: 100vh;
     
 }
@@ -28,8 +28,8 @@ body{
     box-sizing: border-box;
     border-radius: 10rem;
     margin-bottom: auto;
-    background-image:linear-gradient(135deg, gray, cyan);
-    overflow: scroll;
+    background-image: linear-gradient(to bottom left,#c6fa7d,rgb(77, 109, 37));
+    overflow: auto;
 }
 
 img {

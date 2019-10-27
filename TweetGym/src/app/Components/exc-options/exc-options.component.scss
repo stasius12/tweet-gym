@@ -5,11 +5,17 @@
   margin-top: auto;
   margin-bottom: auto;
 }
+@media only screen and (max-width: 30rem){
+  body{
+    font-size: 5rem;
+  }
+}
 
 ul{
   height: 100vh;
   width: 100vw;
   position: fixed;
+ 
   
 
   li{
@@ -18,6 +24,26 @@ ul{
     padding-top: 5vh;
     padding-bottom: auto;
     font-size: 2.5rem;
+    border: none;
+    border-bottom: 1px dotted gray;
+
+    &:nth-child(odd){
+      
+      background:
+      linear-gradient(217deg, #61892f, #86c232 70.71%),
+      linear-gradient(127deg, #222629, #474b4f 70.71%),
+      linear-gradient(336deg, #6b6e70, #61892f 70.71%);
+
+
+    }
+
+    &:nth-child(even){
+      background:
+      linear-gradient(217deg, #222629, #61892f 70.71%),
+      linear-gradient(127deg, #0f0b0b, #2d9404 70.71%),
+      linear-gradient(336deg, rgb(1, 48, 13), rgba(119, 148, 136, 0) 70.71%);
+      
+    }
     
   }
   
@@ -72,3 +98,23 @@ input[type=checkbox]
 label{
   height: 3rem;
 }
+
+#specArr{
+
+  font-size: 7vh;
+  padding-top: 1vh;
+  //padding-left: 80vw;
+  margin-left: 80vw;
+  position:fixed;
+  z-index: 1; 
+  color: #222629;
+  border:none;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+

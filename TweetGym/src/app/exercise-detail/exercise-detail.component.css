@@ -12,7 +12,8 @@
 }
 
 .wrap {
-  background-image: linear-gradient(135deg, gray, cyan);
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#c6fa7d), to(#4d6d25));
+  background-image: linear-gradient(to bottom left, #c6fa7d, #4d6d25);
   height: 100vh;
 }
 
@@ -21,8 +22,9 @@ body {
           box-sizing: border-box;
   border-radius: 10rem;
   margin-bottom: auto;
-  background-image: linear-gradient(135deg, gray, cyan);
-  overflow: scroll;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#c6fa7d), to(#4d6d25));
+  background-image: linear-gradient(to bottom left, #c6fa7d, #4d6d25);
+  overflow: auto;
 }
 
 img {
