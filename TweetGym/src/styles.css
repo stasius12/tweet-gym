@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
 .form-control:focus {
   box-shadow: 0 0 2px 2px #699927;
 }
