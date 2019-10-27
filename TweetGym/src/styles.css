@@ -11,3 +11,8 @@ a {
 a:hover {
   color: #618d24;
 }
+
+.btn-primary.focus,
+.btn-primary:focus {
+  box-shadow: 0 0 2px 2px #699927;
+}

@@ -44,6 +44,9 @@ class Exercise(models.Model):
             self.muscle_group = []
         super().save(*args, **kwargs)
 
+    def avg_rating(self):
+        return self.objects.get(id=self.id).avg_rating
+
     def photo_url(self):
         if self.photo:
             return format_html(f"<img style='max-width: 200px' src='{self.photo.url}'></a>")

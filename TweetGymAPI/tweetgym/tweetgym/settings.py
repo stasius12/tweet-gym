@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'rest_auth.registration',
     'corsheaders',
+    'django_filters',
 
     'exercises',
     'userprofile',
@@ -131,7 +132,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
-    ]
+    ],
 }
 
 REST_AUTH_REGISTER_SERIALIZERS = {
