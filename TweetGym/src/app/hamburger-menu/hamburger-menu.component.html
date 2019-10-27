@@ -6,9 +6,10 @@
 </button>
 <div class="nav">
     <ul class="nav_list">
-        <li class="nav_item"><a href="">Menu Główne</a></li>
-        <li class="nav_item"><a href="/excoptions">Ćwiczenia</a></li>
-        <li class="nav_item"><a href="">Mój profil</a></li>
-        <li class="nav_item"><a href="#">Zaloguj się</a></li>
+        <li class="nav_item" ><a (click)="pies()">Menu Główne</a></li>
+        <li class="nav_item"><a routerLink="">Ćwiczenia</a></li>
+        <li class="nav_item"><a routerLink="/userprofile/2">Mój profil</a></li>
+        <li class="nav_item"><a *ngIf="logged==false"routerLink="/login">Zaloguj się</a></li>
+        <li class="nav_item"><a *ngIf="logged" routerLink="/login" (click)="logout()">Wyloguj się</a></li>
     </ul>
 </div>

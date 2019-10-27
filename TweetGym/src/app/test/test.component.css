@@ -6,3 +6,7 @@
     display: inline-block;
     flex-wrap: nowrap;
 }
+
+* {
+    background-color: black;
+}
