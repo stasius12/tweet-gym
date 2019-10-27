@@ -1,18 +1,18 @@
 <!--------------Hamburger menu--------------->
 <button class="hamburger">
-    <span class="hamburger_box" (click)="reloadUserData()">
-        <span class="hamburger_inner"></span>
-    </span>
+  <span class="hamburger_box" (click)="reloadUserData()">
+    <span class="hamburger_inner"></span>
+  </span>
 </button>
 <div class="nav">
-    <ul class="nav_list">
-        <li class="nav_item" ><a routerLink="">Home</a></li>
-        <li class="nav_item"><a >Exercises</a></li>
-        <li class="nav_item"><a *ngIf="logged" routerLink="/userprofile/2">Profile</a></li>
-        <li class="nav_item"><a *ngIf="logged==false"routerLink="/login">Login</a></li>
-        <li class="nav_item"><a *ngIf="logged" routerLink="/login" (click)="logout()">Log out</a></li>
-        <br>
-        <li class="nav_item"><a *ngIf="logged">You are logged in as:</a></li>
-        <li class="nav_item"><a *ngIf="logged">{{Nick}}</a></li>
-    </ul>
+  <ul class="nav_list">
+    <li class="nav_item"><a routerLink="">Home</a></li>
+    <li class="nav_item"><a>Exercises</a></li>
+    <li class="nav_item"><a *ngIf="logged" routerLink="/userprofile/2">Profile</a></li>
+    <li class="nav_item"><a *ngIf="logged==false" routerLink="/login">Login</a></li>
+    <li class="nav_item"><a *ngIf="logged" routerLink="/login" (click)="logout()">Log out</a></li>
+    <br>
+    <li class="nav_item"><a *ngIf="logged">You are logged in as:</a></li>
+    <li class="nav_item"><a *ngIf="logged">{{Nick}}</a></li>
+  </ul>
 </div>

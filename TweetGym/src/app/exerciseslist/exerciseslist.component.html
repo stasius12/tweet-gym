@@ -1,4 +1,10 @@
 <style>
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10fr;
+  }
+
   .exercises {
     margin-top: 10vh;
   }
@@ -13,22 +19,46 @@
     grid-template-columns: repeat(5, 1fr);
   }
 
+  .subPageTitle {
+    display: grid;
+    border: 2px solid black;
+    grid-template-rows: 5fr 1fr;
+  }
+
+  .subPageTitle p {
+    font-family: 'Oswald', sans-serif;
+    color: #86c232;
+    justify-self: center;
+    align-self: start;
+  }
+
+  .subPageTitle p.title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    align-self: end;
+  }
+
 </style>
-
-<div class="exercises">
-  <div class="nav">
-    <div class="name">Name</div>
-    <div class="description">Description</div>
-    <div class="cardio">Cardio?</div>
-    <div class="difficulty">Difficulty</div>
-    <div class="photo">Photo</div>
-
+<div class="wrapper">
+  <div class="subPageTitle">
+    <p class="title">exercises</p>
+    <p>Push your workout to next level</p>
   </div>
-  <div *ngFor='let ex of exercises' class="exercise">
-    <div class="name">{{ex.name}}</div>
-    <div class="description">{{ex.description}}</div>
-    <div class="cardio">{{ex.cardio}}</div>
-    <div class="difficulty">{{ex.difficulty}}</div>
-    <div class="photo">photo</div>
+  <div class="exercises">
+    <div class="nav">
+      <div class="name">Name</div>
+      <div class="description">Description</div>
+      <div class="cardio">Cardio?</div>
+      <div class="difficulty">Difficulty</div>
+      <div class="photo">Photo</div>
+
+    </div>
+    <div *ngFor='let ex of exercises' class="exercise">
+      <div class="name">{{ex.name}}</div>
+      <div class="description">{{ex.description}}</div>
+      <div class="cardio">{{ex.cardio}}</div>
+      <div class="difficulty">{{ex.difficulty}}</div>
+      <div class="photo">photo</div>
+    </div>
   </div>
 </div>

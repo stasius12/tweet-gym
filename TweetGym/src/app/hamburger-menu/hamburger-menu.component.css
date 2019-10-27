@@ -128,7 +128,11 @@
 
 .nav_item a {
   text-decoration: none;
-  color: #171717;
+  color: #ddd;
+}
+
+.nav_item a:hover {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=hamburger-menu.component.css.map */
