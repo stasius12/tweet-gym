@@ -32,7 +32,7 @@ export class ExerciseDetailComponent implements OnInit {
           console.log('xD');
           starMe(dane.difficulty);
           Cardio(dane.cardio);
-          HamburgerMe();
+          //HamburgerMe();
   
         }, 100);
 
