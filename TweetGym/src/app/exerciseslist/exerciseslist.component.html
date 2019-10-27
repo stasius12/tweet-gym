@@ -1,28 +1,45 @@
 <style>
   .wrapper {
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 10fr;
-  }
-
-  .exercises {
-    margin-top: 10vh;
+    grid-template-rows: 1fr 30px 20fr;
   }
 
   div.exercise {
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    border-bottom: 2px solid black;
+  }
+
+  div.exercises {
+    overflow: scroll;
   }
 
   .exercise,
   .nav {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    background-color: #474b4f;
+    color: #ddd;
   }
+
+  .nav {
+    background-color: #222629;
+  }
+
+  .nav * {
+    color: #ddd;
+  }
+
 
   .subPageTitle {
     display: grid;
-    border: 2px solid black;
     grid-template-rows: 5fr 1fr;
+    margin-top: -5vh;
+    background-image: url('../assets/dumbbells1280x853.jpg');
+    background-position: center;
+    text-shadow: 2px 2px #272323;
+    /* filter: blur(5px); */
   }
 
   .subPageTitle p {
@@ -30,6 +47,7 @@
     color: #86c232;
     justify-self: center;
     align-self: start;
+    text-shadow: 1px 1px #272323;
   }
 
   .subPageTitle p.title {
@@ -44,20 +62,31 @@
     <p class="title">exercises</p>
     <p>Push your workout to next level</p>
   </div>
+  <div class="nav">
+    <div class="name">Name</div>
+    <div class="description">Description</div>
+    <div class="cardio">Cardio?</div>
+    <div class="difficulty">Difficulty</div>
+    <div class="photo">Photo</div>
+  </div>
   <div class="exercises">
-    <div class="nav">
-      <div class="name">Name</div>
-      <div class="description">Description</div>
-      <div class="cardio">Cardio?</div>
-      <div class="difficulty">Difficulty</div>
-      <div class="photo">Photo</div>
-
-    </div>
     <div *ngFor='let ex of exercises' class="exercise">
       <div class="name">{{ex.name}}</div>
       <div class="description">{{ex.description}}</div>
       <div class="cardio">{{ex.cardio}}</div>
-      <div class="difficulty">{{ex.difficulty}}</div>
+      <div class="difficulty">
+        <div [ngSwitch]='ex.difficulty' class="hand-container">
+          <div *ngSwitchCase='3'>
+            <i class="fas fa-hand-rock"></i><i class="fas fa-hand-rock"></i><i class="fas fa-hand-rock"></i>
+          </div>
+          <div *ngSwitchCase='2'>
+            <i class="fas fa-hand-rock"></i><i class="fas fa-hand-rock"></i><i class="far fa-hand-rock"></i>
+          </div>
+          <div *ngSwitchCase='1'>
+            <i class="fas fa-hand-rock"></i><i class="far fa-hand-rock"></i><i class="far fa-hand-rock"></i>
+          </div>
+        </div>
+      </div>
       <div class="photo">photo</div>
     </div>
   </div>

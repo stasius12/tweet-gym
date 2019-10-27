@@ -131,7 +131,7 @@
   color: #ddd;
 }
 
-.nav_item a:hover {
+.nav_item.hoverEffect a:hover {
   font-weight: bold;
 }
 

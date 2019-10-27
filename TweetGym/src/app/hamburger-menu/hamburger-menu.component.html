@@ -6,11 +6,11 @@
 </button>
 <div class="nav">
   <ul class="nav_list">
-    <li class="nav_item"><a routerLink="">Home</a></li>
-    <li class="nav_item"><a>Exercises</a></li>
-    <li class="nav_item"><a *ngIf="logged" routerLink="/userprofile/2">Profile</a></li>
-    <li class="nav_item"><a *ngIf="logged==false" routerLink="/login">Login</a></li>
-    <li class="nav_item"><a *ngIf="logged" routerLink="/login" (click)="logout()">Log out</a></li>
+    <li class="nav_item hoverEffect"><a routerLink="">Home</a></li>
+    <li class="nav_item hoverEffect"><a>Exercises</a></li>
+    <li class="nav_item hoverEffect"><a *ngIf="logged" routerLink="/userprofile/2">Profile</a></li>
+    <li class="nav_item hoverEffect"><a *ngIf="logged==false" routerLink="/login">Login</a></li>
+    <li class="nav_item hoverEffect"><a *ngIf="logged" routerLink="/login" (click)="logout()">Log out</a></li>
     <br>
     <li class="nav_item"><a *ngIf="logged">You are logged in as:</a></li>
     <li class="nav_item"><a *ngIf="logged">{{Nick}}</a></li>
