@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { TokenInterceptorService } from "./services/token-interceptor.service";
 import { ExcOptionsComponent } from "./Components/exc-options/exc-options.component";
 import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { ExerciseslistComponent } from './exerciseslist/exerciseslist.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.componen
     SignUpComponent,
     UserProfileComponent,
     ExcOptionsComponent,
-    HamburgerMenuComponent
+    HamburgerMenuComponent,
+    HomepageComponent,
+    ExerciseslistComponent
   ],
   imports: [
     AlertModule.forRoot(),

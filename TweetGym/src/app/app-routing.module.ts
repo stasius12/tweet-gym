@@ -7,10 +7,13 @@ import { SignUpComponent } from "./sign-up/sign-up.component";
 import { UserProfileComponent } from "./user-profile/user-profile.component";
 import { ExerciseDetailComponent } from "./exercise-detail/exercise-detail.component";
 import { ExcOptionsComponent } from "./Components/exc-options/exc-options.component";
+import { HomepageComponent } from "./homepage/homepage.component"
+import { ExerciseslistComponent } from "./exerciseslist/exerciseslist.component"
 
 const routes: Routes = [
-  { path: "", component: SignUpComponent },
+  { path: "", component: HomepageComponent },
   { path: "test", component: TESTComponent },
+  { path: "exercises", component: ExerciseslistComponent},
   { path: "signup", component: SignUpComponent },
   { path: "login", component: LogInComponent },
   { path: "userprofile/:id", component: UserProfileComponent },
