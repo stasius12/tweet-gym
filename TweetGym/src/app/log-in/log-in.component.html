@@ -1,3 +1,4 @@
+<app-hamburger-menu></app-hamburger-menu>
 <div class="wrapper">
   <div class="backgroundColor">
     <form [formGroup]="login" (ngSubmit)="submit()">
@@ -12,10 +13,10 @@
       <button type="submit" class="btn btn-primary">Log in</button>
       <div class="form-group form-check">
         <label class="form-check-label">
-          <input class="form-check-input" type="checkbox"> Remember me
+          <input class="form-check-input" type="checkbox"><b> Remember me</b>
         </label>
       </div>
-      <p>Don't have account? <a routerLink="/signup"> Sign up!</a></p>
+      <p><b>Don't have account? </b><a routerLink="/signup"> Sign up!</a></p>
 
 
     </form>
