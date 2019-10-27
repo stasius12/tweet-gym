@@ -34,12 +34,28 @@ export const HamburgerMe = () => {
 
     const hamb = document.querySelector('.hamburger');
     const nav = document.querySelector('.nav');
+    
     const handleClick = () => {
 
         //$('.hamburger').classList.toggle('hamburger-active');
         hamb.classList.toggle('hamburger-active');
         nav.classList.toggle('nav-active');
     }
+
+   document.querySelectorAll('ul li').forEach((el) => {
+
+    el.addEventListener('click', () => {
+
+        hamb.classList.toggle('hamburger-active');
+        nav.classList.toggle('nav-active');
+    });
+
+   })
+
+
+
     //$('.hamburger').click(handleClick);
     hamb.addEventListener('click', handleClick);
+
+
 }
