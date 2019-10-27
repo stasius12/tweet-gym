@@ -10,6 +10,7 @@ import { environment } from '../../environments/environment';
 export class AuthService {
 
   private baseURL = environment.apiURL;
+  private CurrentUser: Object;
 
   constructor(
     private httpClient: HttpClient
@@ -23,9 +24,9 @@ export class AuthService {
     })
     .subscribe(
     data  => {
-    console.log("POST Request is successful ", data["key"]);
+    this.CurrentUser=obj.username;
     localStorage.setItem("Token", data["key"])
-    console.log("set")
+    console.log(data)
     },
     error  => {
     console.log("Error", error);  
@@ -54,7 +55,30 @@ export class AuthService {
     );
   }
 
+  isLogged(){
+    if (localStorage.getItem('Token'))
+    {
+      return true
+    }
+    else{
+      return false
+    }
+  }
+
+  logout(){
+    if(this.getToken()){
+    localStorage.removeItem('Token')
+    }
+    console.log("Logout");
+    this.CurrentUser=null;
+  }
+
   getToken(){
     return localStorage.getItem('Token')
   }
+
+  getCurrentUser(){
+    return this.CurrentUser
+  }
+
 }
