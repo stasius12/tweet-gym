@@ -16,6 +16,7 @@
   transition: -webkit-transform .3s .1s ease-in-out;
   transition: transform .3s .1s ease-in-out;
   transition: transform .3s .1s ease-in-out, -webkit-transform .3s .1s ease-in-out;
+  z-index: 1;
 }
 
 .hamburger-active {
@@ -42,7 +43,6 @@
   transform: translateY(-50%);
   -webkit-transition: background-color .1s .2s ease-in-out;
   transition: background-color .1s .2s ease-in-out;
-  background-color: #86c232;
 }
 
 .hamburger_inner::before {
@@ -100,19 +100,20 @@
 .nav {
   height: 100vh;
   width: 250px;
-  background-color: #FFFFFF;
+  background-color: #222629;
+  color: #6b6e70;
   position: absolute;
   top: 0;
   left: 0;
   -webkit-transform: translateX(-250px);
   transform: translateX(-250px);
-  z-index: 1;
+  z-index: 2;
 }
 
 .nav-active {
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
-  z-index: 1;
+  z-index: 2;
 }
 
 .nav_list {

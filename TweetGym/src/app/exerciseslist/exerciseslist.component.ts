@@ -25,6 +25,7 @@ export class ExerciseslistComponent implements OnInit {
 
       }
       );
+
   }
 
 }
